@@ -146,13 +146,14 @@ func (nc *netConn) Read(p []byte) (int, error) {
 
 	for {
 		n, err := nc.read(p)
-		if err != nil {
-			return n, err
-		}
-		if n == 0 {
-			continue
-		}
-		return n, nil
+		// if err != nil {
+		// 	return n, err
+		// }
+		// if n == 0 {
+		// 	continue
+		// }
+		// return n, nil
+		return n, err
 	}
 }
 
